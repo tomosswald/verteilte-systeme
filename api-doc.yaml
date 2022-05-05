@@ -1,0 +1,97 @@
+swagger: "2.0"
+info:
+  title: Todo API
+  description: API description in Markdown.
+  version: 1.0.0
+host: api.example.com
+basePath: /
+schemes:
+  - http
+paths:
+  /todos:
+    get:
+      summary: Returns a list of todos.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+                $ref: '#/definitions/todo'
+    post:
+      summary: Creates an new entry
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: title
+          required: true
+          schema:
+            $ref: '#/definitions/todo'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+                $ref: '#/definitions/todo'
+    delete:
+      summary: deletes single todo.
+      produces:
+        - application/json
+      responses:
+        200:
+          description: OK
+  /todos/:id:
+    get:
+        summary: Returns a single todo with given id.
+        produces:
+          - application/json
+        responses:
+          200:
+            description: OK
+            schema:
+              type: array
+              items:
+                  $ref: '#/definitions/todo'
+    post:
+      summary: updates an entry with gives id
+      produces:
+        - application/json
+      parameters:
+        - in: body
+          name: title
+          required: true
+          schema:
+            $ref: '#/definitions/todo'
+      responses:
+        200:
+          description: OK
+          schema:
+            type: array
+            items:
+                $ref: '#/definitions/todo'
+          
+          
+definitions:
+  todo:
+    type: object
+    properties:
+      id:
+        type: integer
+      title:
+        type: string
+      description:
+        type: string
+      done:
+        type: boolean
+      duedate:
+        type: string
+        description: "ISO 8601 formated string"
+    required:
+      - title
+      - description
+      - duedate
+    

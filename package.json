@@ -1,0 +1,30 @@
+{
+  "name": "verteilte-systeme",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/youngkupferdach1/verteilte-systeme.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/youngkupferdach1/verteilte-systeme/issues"
+  },
+  "homepage": "https://gitlab.com/youngkupferdach1/verteilte-systeme#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-bearer-token": "^2.4.0",
+    "joi": "^17.6.0",
+    "mariadb": "^3.0.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.13.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0"
+  }
+}
